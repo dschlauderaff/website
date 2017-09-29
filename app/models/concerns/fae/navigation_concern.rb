@@ -26,12 +26,14 @@ module Fae
     def structure
       [
         item('Events', path: admin_events_path),
+        item('News Items', path: admin_news_items_path),
+        item('Agendas', path: admin_agendas_path),
         item('Pages', subitems: [
             item('Library', path: fae.edit_content_block_path('library')),
             item('VFD', path: fae.edit_content_block_path('vfd')),
             item('Police', path: fae.edit_content_block_path('police')),
             item('EDC', path: fae.edit_content_block_path('edc'))
-        ])
+        ]),
         # scaffold inject marker
       ]
     end
