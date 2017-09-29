@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170926001342) do
+ActiveRecord::Schema.define(version: 20170929220726) do
+
+  create_table "agendas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "meeting_date"
+    t.string   "title"
+    t.text     "content",      limit: 65535
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
@@ -165,6 +173,21 @@ ActiveRecord::Schema.define(version: 20170926001342) do
     t.index ["reset_password_token"], name: "index_fae_users_on_reset_password_token", unique: true, using: :btree
     t.index ["role_id"], name: "index_fae_users_on_role_id", using: :btree
     t.index ["unlock_token"], name: "index_fae_users_on_unlock_token", unique: true, using: :btree
+  end
+
+  create_table "minutes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "meeting_date"
+    t.string   "title"
+    t.text     "content",      limit: 65535
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  create_table "news_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "title"
+    t.text     "content",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end

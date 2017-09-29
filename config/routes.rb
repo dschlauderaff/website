@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root to: "application#index"
 
   namespace :admin do
+    resources :agendas
+    resources :news_items
     resources :events
   end
   # mount Fae below your admin namespec
