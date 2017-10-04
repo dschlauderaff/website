@@ -28,6 +28,7 @@ module Fae
         item('Events', path: admin_events_path),
         item('News Items', path: admin_news_items_path),
         item('Agendas', path: admin_agendas_path),
+        item('Minutes', path: admin_minutes_path),
         item('Pages', subitems: [
             item('Library', path: fae.edit_content_block_path('library')),
             item('VFD', path: fae.edit_content_block_path('vfd')),

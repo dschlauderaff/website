@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   root to: "application#index"
+  get "/edc" => "application#edc"
 
   namespace :admin do
     resources :agendas
     resources :news_items
     resources :events
+    resources :minutes
   end
   # mount Fae below your admin namespec
   mount Fae::Engine => '/admin'
