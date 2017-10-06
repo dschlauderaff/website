@@ -33,7 +33,8 @@ module Fae
             item('Library', path: fae.edit_content_block_path('library')),
             item('VFD', path: fae.edit_content_block_path('vfd')),
             item('Police', path: fae.edit_content_block_path('police')),
-            item('EDC', path: fae.edit_content_block_path('edc'))
+            item('EDC', path: fae.edit_content_block_path('edc')),
+            item('City Council', path: fae.edit_content_block_path('city_council')),
         ]),
         # scaffold inject marker
       ]

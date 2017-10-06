@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   def edc
     @edc_page = EdcPage.instance
   end
+
+  def council
+    @city_council = CityCouncilPage.instance
+  end
 end
