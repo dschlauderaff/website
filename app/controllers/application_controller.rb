@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
   def edc
     @edc_page = EdcPage.instance
   end
+
+  def calendar
+    @calendar_page = CalendarPage.instance
+  end
 end
