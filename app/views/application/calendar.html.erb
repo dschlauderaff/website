@@ -1,2 +1,4 @@
 <h1><%= @calendar_page.title %></h1>
-<p>render a calendar here</p>
+<%= month_calendar do |date| %>
+  <%= date %>
+<% end %>
